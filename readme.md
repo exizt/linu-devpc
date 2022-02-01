@@ -11,4 +11,31 @@
 customize : 내 환경에 맞추는 부분
 
 
+# 우분투 설치 직후 할 일 
+1. 업데이트 경로
+소프트웨어 & 업데이트로 진입해서, '다운로드 위치 (사용하는 원격 코드 저장소를 의미)'를 확인한다. 좀 더 빠를 곳으로 변경해준다. 기본값인 ('kr.archive.ubuntu.com'의 속도가 매우 느리다) 카카오서버로 변경해준다.
 
+2. ssh keygen 생성
+```
+ssh-keygen
+```
+해당키는 github등에서 등록/설정해야 private git 이용 가능.
+
+# 사용
+```
+sudo apt update && sudo apt upgrade -y
+sudo apt install git
+git clone git@github.com:exizt/castor-my-dev-pc.git
+```
+
+# 문제 해결
+## Waiting for cache lock
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend.
+```
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+
+sudo dpkg --configure -a
+sudo apt update
+```
