@@ -14,3 +14,6 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+
+# 설치가 완료된 후에는, 설정 동기화를 할 것.

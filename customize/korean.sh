@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# bash handling
+if [ -z "$BASH_VERSION" ]; then exec bash "$0" "$@"; exit; fi
+
 ### 한국어 설정
 # 한국어 언어셋 설치
 sudo apt-get install language-pack-ko language-pack-gnome-ko language-pack-ko-base language-pack-gnome-ko-base
