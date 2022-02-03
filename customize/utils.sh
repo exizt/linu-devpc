@@ -18,3 +18,5 @@ sudo apt-get install -y meld
 sudo apt update
 sudo apt-get -y install rabbitvcs-nautilus
 
+# filezilla 설치
+sudo apt-get install -y filezilla
