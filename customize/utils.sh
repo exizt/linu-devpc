@@ -17,3 +17,4 @@ sudo apt-get install -y meld
 # 설명) 윈도우의 tortoiseGit 같은 기능
 sudo apt update
 sudo apt-get -y install rabbitvcs-nautilus
+
