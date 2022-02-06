@@ -20,3 +20,6 @@ sudo apt-get -y install rabbitvcs-nautilus
 
 # filezilla 설치
 sudo apt-get install -y filezilla
+
+# dbeaver 설치
+sudo apt update && sudo snap install dbeaver-ce
