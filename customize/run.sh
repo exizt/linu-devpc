@@ -19,6 +19,9 @@
 # bash handling
 if [ -z "$BASH_VERSION" ]; then exec bash "$0" "$@"; exit; fi
 
+# 스크립트의 경로
+SCRIPT_PATH=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
+
 # 우분투 저장소 경로를 변경하기
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo sed -E -i 's#deb http://[a-z.]*archive\.ubuntu\.com/ubuntu#deb https://mirror.kakao.com/ubuntu/#g' /etc/apt/sources.list
@@ -36,3 +39,4 @@ git config --global color.ui auto
 
 # www-data 그룹에 shoon 유저 추가하기 (기본적으로 shoon 유저가 먼저 있어야 함)
 sudo usermod -a -G www-data shoon
+
