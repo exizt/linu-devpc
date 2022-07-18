@@ -1,4 +1,20 @@
 #!/bin/bash
+# 
+# run.sh
+#
+# ----------------------------------------------------------------------
+# 가장 먼저 실행할 스크립트.
+#
+# Copyright 2022 shoon
+# 
+# 기능
+#   - 우분투 저장소 경로 변경.
+#   - vim, git 설치
+# 
+# Author: shoon
+# Usage: laravel-permission.sh
+# ----------------------------------------------------------------------
+
 
 # bash handling
 if [ -z "$BASH_VERSION" ]; then exec bash "$0" "$@"; exit; fi
@@ -17,3 +33,6 @@ sudo apt-get install git
 git config --global user.name exizt
 git config --global user.email e2xist@gmail.com
 git config --global color.ui auto
+
+# www-data 그룹에 shoon 유저 추가하기 (기본적으로 shoon 유저가 먼저 있어야 함)
+sudo usermod -a -G www-data shoon
