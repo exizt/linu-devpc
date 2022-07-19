@@ -20,6 +20,8 @@ ssh-keygen
 ```shell
 # shoon 유저 추가
 adduser shoon
+# shoon에 sudo 권한 부여하기
+sudo usermod -aG sudo shoon
 
 # git 설치
 sudo apt update && sudo apt upgrade -y
@@ -31,9 +33,6 @@ cd ~/Documents
 
 # 저장소 내려받기
 git clone git@github.com:exizt/linu-devpc.git
-
-# 깃이 퍼미션 변경을 추적하는 것을 끄기
-git config core.filemode false
 ```
 
 
