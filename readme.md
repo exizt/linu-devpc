@@ -84,6 +84,14 @@ chmod 744 ./customize/*
 * meld, rabbitvcs, filezilla, dbeaver 설치 
 
 
+## d2 마운트 및 퍼미션 등
+```shell
+./customize/mount_sdb1.sh /d2
+
+sudo chown shoon:shoon d2
+mkdir /d2/dev
+```
+
 
 # 구성
 * customize : 내 환경에 맞추는 부분
