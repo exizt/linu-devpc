@@ -40,4 +40,3 @@ git config --global color.ui auto
 
 # www-data 그룹에 shoon 유저 추가하기 (기본적으로 shoon 유저가 먼저 있어야 함)
 sudo usermod -a -G www-data shoon
-
