@@ -44,8 +44,8 @@ cd /d2/dev/pcs
 ```
 
 
-# 스크립트 실행
-## 스크립트 실행 권한 부여
+# 3. 스크립트 실행
+스크립트 실행 권한 부여
 ```shell
 su - shoon
 cd /d2/dev/pcs/cator
@@ -53,42 +53,41 @@ cd /d2/dev/pcs/cator
 chmod 744 ./customize/*
 ```
 
-
-## 스크립트 실행 순서
-(1) `run.sh` 실행 (가장 먼저 실행되야 함)
+## 3.1. 기본 스크립트 실행
+```shell
+./customize/customize.sh
 ```
-./customize/run.sh
-```
-`run.sh` 설명
-* 우분투 저장소 경로를 kakao.com으로 변경
-* vim, git 설치
-* git config 설정
-* 유저 shoon에 대한 설정
+설명
+* set_base.sh
+    * 우분투 저장소 경로를 kakao.com으로 변경
+    * vim, git 설치
+    * git config 설정
+    * 유저 shoon에 대한 설정
+* set_korean.sh
+    * 한국어 설정 및 한국어 키보드 설정 등
 
 
-(2) `korean.sh` 실행 (한국어 설정)
-```
-./customize/korean.sh
-```
-`korean.sh`에 대한 설명
-* 한국어 설정 및 한국어 키보드 설정 등
-
-
-(3) `utils.sh` 실행 (기본 무료 유틸들 설치)
-```
-./customize/utils.sh
-```
-`utils` 설명
-* meld, rabbitvcs, filezilla, dbeaver 설치 
-
-
-## d2 마운트 및 퍼미션 등
+## 3.2. d2 마운트 (필요시)
 ```shell
 ./customize/mount_sdb1.sh /d2
 
 sudo chown shoon:shoon d2
 mkdir /d2/dev
 ```
+
+
+## 3.3. 유틸, 데몬 설치
+기본적인 유틸 설치
+```shell
+./daemons/install_utils.sh
+```
+`utils` 설명
+* meld, rabbitvcs, filezilla, dbeaver 설치 
+
+### 3.3.1 그 외의 유틸
+smartgit
+vscode
+docker
 
 
 # 구성
