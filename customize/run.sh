@@ -30,9 +30,10 @@ sudo sed -E -i 's#deb http://[a-z.]*archive\.ubuntu\.com/ubuntu#deb https://mirr
 sudo apt-get install vim
 
 # git 설치
-sudo apt-get install git
+# sudo apt-get install git
 
 # git 설정
+git config core.filemode false # 깃이 퍼미션 변경을 추적하는 것을 끄기
 git config --global user.name exizt
 git config --global user.email e2xist@gmail.com
 git config --global color.ui auto
