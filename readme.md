@@ -1,4 +1,4 @@
-# Linu 프로젝트 개요
+# 1. Linu 프로젝트 개요
 
 Project "Linu"
 * 리눅스 기반에서 '개발 환경'을 구성하기 위한 스크립트와 설정 등을 관리하는 프로젝트.
@@ -7,27 +7,33 @@ Project "Linu"
 <br><br>
 
 
-# 우분투 설치 직후
-1. ssh keygen 생성
+# 2. 저장소 내려받기
+(1). ssh keygen 생성
 ```shell
 ssh-keygen
 ```
 해당키는 github등에서 등록/설정해야 private git 이용 가능.
 
 
-2. shoon 유저가 필요하다. 다음의 스크립트로 유저를 추가해주거나, 우분투의 설정을 통해서 사용자를 추가한다.
+(2). git 설치 및 linu프로젝트 내려받기(clone)
+
 ```shell
 # shoon 유저 추가
 adduser shoon
-```
 
-3. git 설치 및 linu프로젝트 내려받기(clone)
-
-git 설치
-```shell
-su - root
+# git 설치
 sudo apt update && sudo apt upgrade -y
 sudo apt install git
+
+#프로젝트 내려받기
+su - shoon
+cd ~/Documents
+
+# 저장소 내려받기
+git clone git@github.com:exizt/linu-devpc.git
+
+# 깃이 퍼미션 변경을 추적하는 것을 끄기
+git config core.filemode false
 ```
 
 
@@ -36,13 +42,6 @@ sudo apt install git
 su - shoon
 
 cd /d2/dev/pcs
-
-
-# 저장소 내려받기
-git clone git@github.com:exizt/castor-my-dev-pc.git
-
-# 깃이 퍼미션 변경을 추적하는 것을 끄기
-git config core.filemode false
 ```
 
 
