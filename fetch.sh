@@ -16,3 +16,5 @@ git pull
 
 # 스크립트 실행 권한 부여
 chmod 744 ./*.sh
+chmod 744 ./customize/*.sh
+chmod 744 ./daemons/*.sh
