@@ -16,9 +16,10 @@ cd $SCRIPT_PATH
 bash ./set_korean.sh
 
 # git 설정
+git config core.filemode false # 깃이 퍼미션 변경을 추적하는 것을 끄기
 git config --global user.name exizt
 git config --global user.email e2xist@gmail.com
-
+git config --global color.ui auto
 
 ## Customize
 # '빈 화면'이 나타나는 시간. (단위: 초)(설정 - 전원 - 절전 - 빈 화면)

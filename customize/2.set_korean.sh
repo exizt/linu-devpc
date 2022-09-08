@@ -19,3 +19,4 @@ gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hangul'), ('xk
 
 ## 참고) 여기까지 하고, 이상이 있을 수 있으니, 
 ## '설정 - 지역 및 언어 - 설치된 언어 관리'를 눌러서 남은 업데이트를 해주도록 한다.
+## 로그아웃 후 로그인을 하면 한글로 변경되어 있음.
