@@ -7,14 +7,6 @@ if [ -z "$BASH_VERSION" ]; then exec bash "$0" "$@"; exit; fi
 SCRIPT_PATH=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 cd $SCRIPT_PATH
 
-# 기본적인 설정 스크립트 실행
-bash ./set_base.sh
-
-cd $SCRIPT_PATH
-
-# 한국어 설정 스크립트 실행
-bash ./set_korean.sh
-
 # git 설정
 git config core.filemode false # 깃이 퍼미션 변경을 추적하는 것을 끄기
 git config --global user.name exizt
