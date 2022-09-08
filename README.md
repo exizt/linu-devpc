@@ -25,7 +25,7 @@ sudo usermod -aG sudo shoon
 
 # git 설치
 sudo apt update && sudo apt upgrade -y
-sudo apt install git
+sudo apt install git -y
 
 #프로젝트 내려받기
 su - shoon
