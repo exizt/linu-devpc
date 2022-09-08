@@ -25,7 +25,7 @@ sudo usermod -aG sudo shoon
 
 # git 설치
 sudo apt update && sudo apt upgrade -y
-sudo apt install git -y
+sudo apt install -y git
 
 #프로젝트 내려받기
 su - shoon
@@ -59,7 +59,7 @@ chmod 744 ./customize/*
 ```
 설명
 * set_base.sh
-    * 우분투 저장소 경로를 kakao.com으로 변경
+    * 우분투 저장소 경로를 `kakao.com`으로 변경
     * vim, git 설치
     * git config 설정
     * 유저 shoon에 대한 설정

@@ -27,10 +27,10 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo sed -E -i 's#deb http://[a-z.]*archive\.ubuntu\.com/ubuntu#deb https://mirror.kakao.com/ubuntu/#g' /etc/apt/sources.list
 
 # vi에디터로 수정이 잘 안 되니까, vim을 설치
-sudo apt-get install vim
+sudo apt-get install -y vim
 
 # git 설치 (설치되어 있지 않았을 경우에 설치하기 위함)
-sudo apt-get install git
+sudo apt-get install -y git
 
 # git 설정
 git config core.filemode false # 깃이 퍼미션 변경을 추적하는 것을 끄기
