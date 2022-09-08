@@ -14,7 +14,8 @@ if [ -z "$BASH_VERSION" ]; then exec bash "$0" "$@"; exit; fi
 
 # 파라미터가 없는 경우는 실행하지 않도록 함. (파라미터는 목적 경로)
 if [ "$#" -lt 1 ]; then
-    echo "[install-mediawiki.sh] Parameters are required."
+    SCRIPT_NAME=$(basename "$0")
+    echo "[$SCRIPT_NAME] Parameters are required."
     exit 1
 fi
 
