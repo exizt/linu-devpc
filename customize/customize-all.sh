@@ -8,11 +8,11 @@ SCRIPT_PATH=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 
 # 기본적인 설정 스크립트 실행
 cd $SCRIPT_PATH
-bash ./set_base.sh
+bash ./1.base.sh
 
 # 한국어 설정 스크립트 실행
 cd $SCRIPT_PATH
-bash ./set_korean.sh
+bash ./2.set_korean.sh
 
 # 커스터마이징 설정
 cd $SCRIPT_PATH

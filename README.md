@@ -8,7 +8,7 @@ Project "Linu"
 
 
 # 2. 저장소 내려받기
-(1). ssh keygen 생성 및 등록
+## 2.1. ssh keygen 생성 및 등록
 ```shell
 ssh-keygen
 ```
@@ -18,7 +18,7 @@ ssh-keygen
 - 명칭은 `username@MainPC-VM-Test-20220908`, `username@Laptop-xx-20220908` 같은 형태로.
 
 
-(2) 사전 작업
+## 2.2. 사전 작업
 `/home/d1`을 이용시
 ```shell
 # 디렉토리 생성 및 심볼릭 링크 생성
@@ -39,7 +39,7 @@ sudo mkdir /d2/dev
 sudo chown exizt:exizt /d2/dev
 ```
 
-(3). git 설치 및 linu프로젝트 내려받기(clone)
+## 2.3. git 설치 및 linu프로젝트 내려받기 (clone)
 ```shell
 mkdir /d1/dev/pcs
 # 또는
@@ -57,31 +57,15 @@ git clone git@github.com:exizt/linu-devpc.git
 ```shell
 # shoon 유저 추가
 adduser shoon
+
 # shoon에 sudo 권한 부여하기
 sudo usermod -aG sudo shoon
 
-#프로젝트 내려받기
-su - shoon
-cd ~/Documents
+# www-data 그룹에 shoon 유저 추가하기
+sudo usermod -a -G www-data shoon
 ```
-
-프로젝트 내려받기
-```shell
-su - shoon
-
-cd /d2/dev/pcs
-```
-
 
 # 3. 스크립트 실행
-스크립트 실행 권한 부여
-```shell
-su - shoon
-cd /d2/dev/pcs/cator
-
-chmod 744 ./customize/*
-```
-
 ## 3.1. 기본 스크립트 실행
 ```shell
 ./customize/customize.sh

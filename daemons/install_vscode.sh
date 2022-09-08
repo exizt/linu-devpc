@@ -11,9 +11,9 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/p
 rm -f packages.microsoft.gpg
 
 # 설치
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code # or code-insiders
+sudo apt install -y apt-transport-https
+sudo apt update -y
+sudo apt install -y code # or code-insiders
 
 
 # 설치가 완료된 후에는, 설정 동기화를 할 것.

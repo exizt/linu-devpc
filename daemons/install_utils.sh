@@ -17,8 +17,8 @@ sudo apt-get install -y meld
 # rabbitVCS - [탐색기에 git 아이콘 표시]
 # 설명) 윈도우의 tortoiseGit 같은 기능
 # 라이선스) GPL 2 무료 소프트웨어
-sudo apt update
-sudo apt-get -y install rabbitvcs-nautilus
+sudo apt update -y
+sudo apt-get install -y rabbitvcs-nautilus
 
 # filezilla 설치 [FTP 도구]
 # 라이선스) 무료 소프트웨어
