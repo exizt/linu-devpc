@@ -10,9 +10,10 @@ Project "Linu"
 # 2. 저장소 내려받기
 ## 2.1. ssh keygen 생성 및 등록
 ```shell
+# 키 생성하기
 ssh-keygen
 ```
-- 해당키는 github등에서 등록/설정해야 private git 이용 가능.
+- 해당키는 `github`등에서 등록/설정해야 private git 이용 가능.
 - `~/.ssh/id_rsa.pub`에서 값을 복사. 
 - `github`에서 `settings` - `SSH and GPG keys` - `New SSH key` 클릭
 - 명칭은 `username@MainPC-VM-Test-20220908`, `username@Laptop-xx-20220908` 같은 형태로.
@@ -55,6 +56,10 @@ git clone git@github.com:exizt/linu-devpc.git
 
 
 ```shell
+# 시스템적으로만 사용되는 유저 shoon 생성
+sudo adduer --system shoon
+
+
 # shoon 유저 추가
 adduser shoon
 
@@ -66,21 +71,16 @@ sudo usermod -a -G www-data shoon
 ```
 
 # 3. 스크립트 실행
-## 3.1. 기본 스크립트 실행
-```shell
-./customize/customize.sh
-```
-설명
-* set_base.sh
-    * 우분투 저장소 경로를 `kakao.com`으로 변경
-    * vim, git 설치
-    * git config 설정
-    * 유저 shoon에 대한 설정
-* set_korean.sh
-    * 한국어 설정 및 한국어 키보드 설정 등
+
+스크립트 목록
+- `customize`
+    - `1.base.sh` : 우분투 저장소 경로를 `kakao.com`으로 변경. `vim`, `git` 설치
+    - `2.set_korean.sh` : 한글 설정 관련 (한국어 설정, 한국어 키보드 설정 등)
+    - `customize.sh` : `git config`설정, 빈화면/자동 화면 잠금 시간 설정 (각 30분씩)
+    - `mount_sdb1.sh` : `sdb1`을 마운트할 경우에 사용.
 
 
-## 3.2. d2 마운트 (필요시)
+## 3.1. d2 마운트 (필요시)
 ```shell
 ./customize/mount_sdb1.sh /d2
 
@@ -89,7 +89,7 @@ mkdir /d2/dev
 ```
 
 
-## 3.3. 유틸, 데몬 설치
+## 3.2. 유틸, 데몬 설치
 기본적인 유틸 설치
 ```shell
 ./daemons/install_utils.sh
@@ -97,7 +97,7 @@ mkdir /d2/dev
 `utils` 설명
 * meld, rabbitvcs, filezilla, dbeaver 설치 
 
-### 3.3.1 그 외의 유틸
+### 3.2.1 그 외의 유틸
 smartgit
 vscode
 docker
