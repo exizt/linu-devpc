@@ -78,6 +78,12 @@ sudo usermod -a -G www-data shoon
     - `2.set_korean.sh` : 한글 설정 관련 (한국어 설정, 한국어 키보드 설정 등)
     - `customize.sh` : `git config`설정, 빈화면/자동 화면 잠금 시간 설정 (각 30분씩)
     - `mount_sdb1.sh` : `sdb1`을 마운트할 경우에 사용.
+- `daemons`
+    - `install_utils.sh` : 있으면 좋은 무료 유틸들 설치 (meld, filezilla 등)
+    - `install_vscode.sh` 
+    - `install_smartgit.sh`
+    - `install_docker.sh`
+    - `install_docker_compose.sh`
 
 
 ## 3.1. d2 마운트 (필요시)
@@ -92,15 +98,29 @@ mkdir /d2/dev
 ## 3.2. 유틸, 데몬 설치
 기본적인 유틸 설치
 ```shell
+# 기본적인 유틸 설치 (meld, rabbitvcs, filezilla, dbeaver-ce)
 ./daemons/install_utils.sh
-```
-`utils` 설명
-* meld, rabbitvcs, filezilla, dbeaver 설치 
 
-### 3.2.1 그 외의 유틸
-smartgit
-vscode
-docker
+# vscode
+./daemons/install_vscode.sh
+
+# smartgit
+./daemons/install_smartgit.sh
+
+# docker
+./daemons/docker/install_docker.sh
+./daemons/docker/install_docker_compose.sh
+```
+설명
+- `install_utils.sh`: 있으면 좋은 무료 유틸들 설치 (meld, filezilla 등)
+    - `meld`: 텍스트 비교 도구 (GPL)
+    - `rabbitvcs`: 탐색기에 git 아이콘 표시 도구 (GPL)
+    - `filezilla`: FTP 도구 (Free)
+    - `dbeaver-ce`: DB 클라이언트 도구 (Free)
+- `install_vscode.sh` 
+- `install_smartgit.sh`
+- `install_docker.sh`
+- `install_docker_compose.sh`
 
 
 # 구성
