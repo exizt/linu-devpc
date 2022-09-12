@@ -6,7 +6,7 @@
 #       Usage : mount_sdb1.sh [destination path]
 # Description : 마운트를 조금 편리하게 하려고 스크립트화한 것임.
 #   Arguments :
-#       - destination path : sdb1이 마운트된 훙에 연결될 경로
+#       - destination path : sdb1이 마운트될 경로
 # ===========================================
 
 # bash handling
